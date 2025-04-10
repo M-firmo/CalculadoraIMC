@@ -33,8 +33,7 @@ Este projeto tem como objetivo fornecer uma maneira de calcular o Índice de Mas
 ## Instalação
 ```
 # Clone o repositório
-git clone https://github.com/murilobauck/CalculadoraIMC.git
-
+git clone https://github.com/M-firmo/CalculadoraIMC
 # Acesse a pasta do projeto
 cd CalculadoraIMC
 
