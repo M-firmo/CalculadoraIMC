@@ -1,20 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, Platform, Text } from 'react-native';
+import Title from './scr/components/Title';
+import FormIMC from './scr/components/FormIMC';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+    >
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <View style={styles.inner}>
+          <Title />
+          <FormIMC />
+        </View>
+      </TouchableWithoutFeedback>
+    </KeyboardAvoidingView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    padding: 16,
+    backgroundColor: '#4c9f3f',
+  },
+  inner: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 16,
+    backgroundColor: '#edffd2',
+    borderRadius: 50,
   },
 });
