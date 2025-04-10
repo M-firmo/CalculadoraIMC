@@ -54,5 +54,15 @@ Código organizado da seguinte maneira:
 - **FormIMC.js**: Recebe o peso e a altura do usuário para calcular o IMC.
 ---
 
+## Para a execução:
+```
+npx expo start --tunnel
+```
+
+#### IOS
+- Você pode escanear pela própria câmera do dispositivo.
+
+#### Android
+- É necessário escanear pelo aplicativo Expo Go.
 
 
